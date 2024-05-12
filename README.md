@@ -5,6 +5,6 @@
 - **ASSISTANT_PORT** - Port of Assistant Service (Default: 30002)
 
 ## Docker-compose
-Example of docker-compose stored in ./deployment/docker-compose.yml
+Example of docker-compose stored in **deployment/docker-compose.yml**
 ## API
-API stored in directory
+API stored in directory **api/openapi.yaml**
