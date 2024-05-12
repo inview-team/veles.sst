@@ -4,7 +4,7 @@ from fastapi import APIRouter, UploadFile
 from usecases.command import CommandUseCases
 
 router = APIRouter(prefix="/commands", )
-usecases: CommandUseCases | None = None
+usecases = None
 
 @router.post("")
 async def execute_command(file: UploadFile):
