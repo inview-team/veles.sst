@@ -9,7 +9,9 @@ usecases: CommandUseCases | None = None
 @router.post("")
 async def execute_command(file: UploadFile):
     start_time = time.time()
-    command = usecases.execute(file.file.read())
+    token = file.headers.get("authorization")
+    session_id = file.headers.get("session-id")
+    command = usecases.execute(session_id, token, file.file.read())
     end_time = time.time()
     print(end_time-start_time)
     return {'command': command}

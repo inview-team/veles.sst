@@ -1,0 +1,18 @@
+version: '3'
+services:
+  speech_to_text:
+    image: sst
+    container_name: sst
+    environment:
+      ASSISTANT_HOST: 25.49.45.18
+      ASSISTANT_PORT: 30003
+    ports:
+      - 30001:30001
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

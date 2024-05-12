@@ -1,4 +1,5 @@
 import io
+import string
 
 from domain.command import CommandRepository, Command
 from faster_whisper import WhisperModel
