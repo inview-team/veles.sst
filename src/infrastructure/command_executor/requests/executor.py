@@ -20,7 +20,8 @@ class RequestsCommandExecutor(CommandExecutor):
         }
 
         response = requests.post(url, json=body, headers=headers)
-
+        print(response.status_code)
+        print(response.text)
         if response.status_code != requests.codes.ok:
             return False
         return True
