@@ -1,0 +1,14 @@
+version: '3'
+services:
+  speech_to_text:
+    image: inviewteam/sst:cpu
+    container_name: sst
+    restart: always
+    ports:
+      - "30001:30001"
+    environment:
+      ASSISTANT_HOST: http://25.49.45.18
+      ASSISTANT_PORT: 30003
+      SERVICE_MODE: cpu
+    volumes:
+      - ../cache:/app/cache
